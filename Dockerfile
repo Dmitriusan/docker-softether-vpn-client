@@ -1,4 +1,4 @@
-From ubuntu:trusty
+FROM ubuntu:trusty
 MAINTAINER dmitriusan
 
 # Origins:
@@ -6,7 +6,7 @@ MAINTAINER dmitriusan
 
 env DEBIAN_FRONTEND noninteractive
 
-ENV VERSION v4.18-9570-rtm-2015.07.26
+ENV VERSION v4.20-9608-rtm-2016.04.17
 
 WORKDIR /usr/local/vpnclient
 
