@@ -13,6 +13,9 @@ Either provide valid client configuration file vpn_client.config on this locatio
 
 and perform setup steps as described here https://creudevel.wordpress.com/2014/02/10/install-softether-client-in-centos/comment-page-1/
 
+By default, image expects VPN interface name to be vpn0. It's customizable via VPN_INTERFACE_NAME env variable in Dockerfile. 
+SoftEther VPN client takes this name from its config file.  
+
 Should be started as root or runs docker via sudo
 
     # ./service.sh start

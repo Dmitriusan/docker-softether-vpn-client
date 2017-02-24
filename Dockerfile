@@ -7,6 +7,7 @@ MAINTAINER dmitriusan
 env DEBIAN_FRONTEND noninteractive
 
 ENV VERSION v4.20-9608-rtm-2016.04.17
+ENV VPN_INTERFACE_NAME vpn0
 
 WORKDIR /usr/local/vpnclient
 
@@ -32,4 +33,5 @@ CMD /usr/local/vpnclient/vpnclient start 2>&1 && \
         chmod a+x '/etc/dhcp/dhclient-exit-hooks.d/rfc3442-classless-routes' ; \
 # Interface is not up immediately
         sleep 5 && \
-        dhclient -d vpn_irr
+# If you defined another name of a vpn interface when generating client config, set the VPN_INTERFACE_NAME parameter
+        dhclient -d $VPN_INTERFACE_NAME
